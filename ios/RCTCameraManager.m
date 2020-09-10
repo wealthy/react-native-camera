@@ -1008,7 +1008,7 @@ didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL
           @"velocity": [NSNumber numberWithDouble:velocity]
         };
 
-       [self.bridge enqueueJSCall:@"RCTEventEmitter" method:@"receiveEvent" args:@[event[@"target"], RCTNormalizeInputEventName(@“zoomChanged”), event] completion:NULL];
+       [self.bridge enqueueJSCall:@"RCTEventEmitter" method:@"receiveEvent" args:@[event[@"target"], RCTNormalizeInputEventName(@"zoomChanged"), event] completion:NULL];
     
         device.videoZoomFactor = zoomFactor;
         [device unlockForConfiguration];
